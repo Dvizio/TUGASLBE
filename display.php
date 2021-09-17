@@ -2,6 +2,7 @@
   include_once'dbconnect.php';
   $sql = "SELECT * FROM enemies";
   $result = mysqli_query($conn,$sql);
+  //test
 ?>
 
 <!DOCTYPE html>
