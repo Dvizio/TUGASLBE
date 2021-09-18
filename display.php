@@ -1,9 +1,8 @@
 <?php
-  include_once'dbconnect.php';
+  include_once 'dbconnect.php';
   $sql = "SELECT * FROM enemies";
   $result = mysqli_query($conn,$sql);
-  //test
-?>
+ ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -18,34 +17,26 @@
 
 <body>
   <header id="mainHeader">
-    <div class="container">
+    <div>
       <h1>Genshin Monster List</h1>
     </div>
   </header>
-  <table class="table" , border: 1px solid #333;>
-    <thead>
-      <tr>
-        <th>Names</th>
-        <th>Image</th>
-        <th>Link</th>
-      </tr>
-    </thead>
-    <tbody>
-      <?php while($row = mysqli_fetch_array($result)){ ?>
-      <tr>
-        <td>
-          <?php echo $row['names'] ?>
-        </td>
-        <td>
-          <img src=<?php echo 'https://www.gensh.in/'. $row['image'] ?>>
-        </td>
-        <td>
-          <a href="<?php echo 'https://www.gensh.in/'. $row['link'] ?>">Go to data</a>
-        </td>
-      </tr>
-      <?php } ?>
-    </tbody>
-  </table>
-</body>
 
+  <div class="search">
+   <input type="text" placeholder="Search" id="search-input">
+  </div>
+  <div class="container" id="container-display">
+      <?php 
+      while ($row = mysqli_fetch_array($result)){ ?>
+      <a href="https://www.gensh.in<?php echo $row['link']?> ">
+        <div class="card">
+          <img src="https://www.gensh.in<?php echo $row['image']?>" alt="" srcset="">
+          <h2><?= $row['names'] ; ?></h2>
+        </div>
+      </a>
+    <?php } ?>
+  </div>
+
+  <script src="./js/main.js"></script>
+</body>
 </html>

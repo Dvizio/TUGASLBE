@@ -1,8 +1,7 @@
 <?php 
 
-include_once'dbconnect.php';
+include_once 'dbconnect.php';
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">

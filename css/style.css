@@ -1,12 +1,69 @@
-.table {
-  border-style: ridge;
-  border-width: 150px;
-  border-color: black;
-  background-color: #d9d9d9;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
 }
-th {
-  border: 5px solid #095484;
+
+h1 {
+  text-align: center;
+  font-weight: 500;
+  
 }
-td {
-  border: 20px groove #1c87c9;
+
+a{
+  text-decoration: none !important;
+  display: block;
+  width:33%;
 }
+
+h2{
+  font-weight: 400;
+  margin-top: 20px;
+  margin-left: 10px;
+  color: black;
+  font-size: 18px !important;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 23px !important;
+  margin: auto;
+  width: 80%;
+}
+
+.card {
+  display: flex;
+  border-radius: 25px !important;
+  padding: 15px;
+  background: #fff;
+  border-radius: 2px;
+  height: 150px;
+  margin: 8px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.card img{
+  display: block;
+  border-radius: 50%;
+  border: 3px solid red;
+}
+
+.search{
+  margin: auto;
+  width: 80%;
+  margin-top: 50px;
+}
+
+.search input{
+  width:50%;
+  height:35px;
+  display: block;
+  margin: auto;
+  border-radius:15px;
+  text-align: center;
+}
+
