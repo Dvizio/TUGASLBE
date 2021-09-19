@@ -18,6 +18,8 @@
 <body>
   <header id="mainHeader">
     <div>
+      <br>
+      <br>
       <h1>Genshin Monster List</h1>
     </div>
   </header>
